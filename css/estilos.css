@@ -307,7 +307,7 @@ footer .fa-linkedin-in {
     font-size: 30px;
     text-align: center;
     padding: 8px 0 15px 0;
-    right: 50px;
+    right: 34px;
     position: fixed;
     bottom: 0px;
 }
@@ -339,6 +339,9 @@ footer .fa-linkedin-in {
     footer a {
         color: red;
 
+    }
+    #whatsapp{
+        right: 60px;
     }
 
     #proyectos {
