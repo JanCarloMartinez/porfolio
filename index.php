@@ -1,3 +1,10 @@
+<?php
+ $pg ="inicio";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,38 +23,12 @@
 
 <body id="inicio">
     <header>
-        <nav class="navbar navbar-expand-md mb-4">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0 mt-2">
-                        <li class="nav-item">
-                            <a class="nav-link px-4 py-1 active" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-4 py-1 " href="Sobre_mi.html">Sobre mí</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-4 py-1 " href="proyectos.html">Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-4 py-1 " href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                    <div class="d-inline">
-                        <a href="" class="btn btn-rojo">Descargar mi CV <i class="fas fa-download"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <?php include_once "menu.php"; ?>
     </header>
     <main class="container">
         <div class="row">
             <div class="col-12 mt-4 text-center div-cohete">
-                <a href="proyectos.html"><img src="images/cohete.svg" class="cohete" style="margin-top: 7px"></a>
+                <a href="proyectos.php"><img src="images/cohete.svg" class="cohete" style="margin-top: 7px"></a>
             </div>
         </div>
         <div class="row">
@@ -59,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="proyectos.html" class="btn shadow">Conoce mis proyectos</a>
+                <a href="proyectos.php" class="btn shadow">Conoce mis proyectos</a>
             </div>
         </div>
     </main>
