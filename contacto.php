@@ -1,6 +1,38 @@
 <?php
  $pg ="contacto";
 
+if($_POST){
+    $nombre =$_POST["txtNombre"];
+    $correo =$_POST["txtCorreo"];
+    $telefono =$_POST["txtTelefono"];
+    $mensaje =$_POST["txtMensaje"];
+
+    // Varios destinatarios
+    $para = "2015.jancarlo@gmial.com";
+    $titulo = 'Recibiste un mensaje desde la web';
+
+    //mensaje
+    $cuerpo ="
+    Nombre: $nombre <br>
+    Correo: $correo <br>
+    Telefono: $telefono <br>
+    Mensaje: $mensaje <br>
+    ";
+
+    // Para enviar un HTML, se debe de establecer la cabecera Content-type
+    $cabeceras = 'MIME-Vercion: 1.0'  . "\r\n";
+    $cabeceras .= 'Content-type: text/html; charset=UFT-8' . "\r\n";
+
+    // Cabeceras adicionales
+    $cabeceras .= 'To: 2015.jancarlo@gmail.com' . "\r\n";
+    $cabeceras .= 'Form: 2015.jancarlo@gmail.com' . "\r\n";
+
+    // Enviarlo
+    //mail($para, $titulo, $cuerpo, $cabecera);
+    header("location: confirmacion-envio.php");
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +83,7 @@
                             class="form-control shadow" required=""></textarea>
                     </div>
                     <div class="me-auto text-right">
-                        <button id="btnEnviar" name="btnEnviar" class="btn px-4">ENVIAR</button>
+                        <a href="confirmacion-envio.php"><button id="btnEnviar" name="btnEnviar" class="btn px-4">ENVIAR</button></a>
                     </div>
                 </form>
             </div>
